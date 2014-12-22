@@ -8,7 +8,7 @@ SoCom - the Social Communication Middleware
 
 
 == What is it?
-SoCom is a GWT-based middleware that allows easy connection of any arbitrary application (e.g. standalone game app) with ~all~ social media pplications out there.
+SoCom is a GWT-based middleware that allows easy connection of any arbitrary application (e.g. standalone game app) with ~all~ social media applications out there.
 
 == How to
 

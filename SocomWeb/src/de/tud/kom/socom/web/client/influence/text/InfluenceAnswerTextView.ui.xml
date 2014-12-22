@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:my="urn:import:de.tud.kom.socom.web.client.administration.itemadministration"
+			 xmlns:report="urn:import:de.tud.kom.socom.web.client.reporting"
+			 >
+			 <ui:style>
+			.inputposition
+			{
+				position: relative;
+				bottom: 20px;
+			}
+			.answerposition {
+				position: relative;
+			}
+			.itemadminposition {
+				position: absolute;
+				right: 0px;
+			}
+			.reportposition {
+				position: absolute;
+				right: 32px;
+			}
+			 </ui:style>
+		
+   	<g:HTMLPanel addStyleNames="{style.answerposition}">
+	   	<my:ItemAdministration ui:field="itemAdministration" addStyleNames="{style.itemadminposition}"></my:ItemAdministration>
+	   	<report:ItemReportView ui:field="itemReportView" addStyleNames="{style.reportposition}"></report:ItemReportView>
+	   	<g:HTMLPanel addStyleNames="text_only formoption">
+	   	  <div class="resultbar hidden" ui:field="resultBar"> <!--  may contain class "winner" as well for green color -->
+	          <div class="numbers"><span class="number" ui:field="number">x</span> von <span class="total" ui:field="total">y</span></div>
+	          <div class="bar" ui:field="bar"><div class="percent" ui:field="percent">z%</div></div>
+          </div>
+		  <g:SimpleCheckBox name="answerCheckbox" addStyleNames="checkbox" ui:field="answerCheckbox" />
+	      <g:HTMLPanel addStyleNames="label">
+	          <g:HorizontalPanel>
+	              <g:HTMLPanel>
+	       			<label for="answerCheckbox" ui:field="answerLabel">[Labeltext]</label>
+	              </g:HTMLPanel>
+	          </g:HorizontalPanel>
+	       <div class="fromuser hidden" ui:field="fromUserContainer">Diese Antwort wurde von <a href="#" ui:field="fromLink">Hans S.</a> vor <span ui:field="fromTime">1 Minute</span> zur Auswahl hinzugefügt.</div>
+	       <g:TextBox ui:field="answerTextBox" addStyleNames="answerTextBox {style.inputposition} hidden">Gib deinen eigenen Text ein!</g:TextBox>
+	       <g:Button ui:field="addTextButton" addStyleNames="button hidden {style.inputposition}">Hinzufügen</g:Button>
+	     </g:HTMLPanel>
+		</g:HTMLPanel>	
+	</g:HTMLPanel>
+</ui:UiBinder>

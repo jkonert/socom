@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements">
+	<ui:style>
+		.backbutton {
+			margin-left: 15px;
+			margin-bottom: 20px;
+		}
+	</ui:style>
+	<g:HTMLPanel> 
+		<my:ErrorList ui:field="errorList"></my:ErrorList>
+		<g:HorizontalPanel>
+			<g:ListBox ui:field="gameList" visibleItemCount="1" multipleSelect="false" addStyleNames="hidden"/>
+			<g:InlineHyperlink addStyleNames="button {style.backbutton}" targetHistoryToken="./admin/overview"> Zurück </g:InlineHyperlink>
+		</g:HorizontalPanel>
+		<g:SimplePanel ui:field="statisticPanel" visible="true"></g:SimplePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,10 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements">	
+	<g:InlineHTML> <!--  a span element -->
+		Es sollen mindestens <span ui:field="minText"></span> 
+		und maximal <span ui:field="maxText"></span> 
+		Elemente ausgewählt werden (<span ui:field="currentText"></span>)
+	</g:InlineHTML>			 		
+</ui:UiBinder>

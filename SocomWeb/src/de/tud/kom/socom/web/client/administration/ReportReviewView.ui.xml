@@ -1,0 +1,70 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:style>
+        .keyword {
+			font-size: 13px;
+			font-weight: bold;
+			text-align: right;
+			margin-right: 10px;
+		}
+		.valueword {
+			font-size: 13px;
+			resize: none;
+		}
+		.status {
+			color: #f00;
+			font-weight: bold;
+		}
+		.reviewinfo {
+			font-size: 9px;
+		}
+    </ui:style>    
+    
+	<g:HTMLPanel>
+		<g:Grid>
+			<g:row>
+				<g:customCell><g:Label text="Meldung prüfen"/></g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell><g:Label text="ID" addStyleNames="{style.keyword}"/></g:customCell>
+				<g:customCell><g:Label ui:field="id" addStyleNames="{style.valueword}"/></g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell><g:Label text="Date" addStyleNames="{style.keyword}"/></g:customCell>
+				<g:customCell><g:Label ui:field="date" addStyleNames="{style.valueword}"/></g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell><g:Label text="Informant" addStyleNames="{style.keyword}"/></g:customCell>
+				<g:customCell><g:InlineHyperlink ui:field="informant" addStyleNames="{style.valueword}"/></g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell><g:Label text="Referenz" addStyleNames="{style.keyword}"/></g:customCell>
+				<g:customCell><g:InlineHyperlink ui:field="reference" addStyleNames="{style.valueword}"/></g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell><g:Label text="Grund" addStyleNames="{style.keyword}"/></g:customCell>
+				<g:customCell><g:TextArea ui:field="reportArea" addStyleNames="{style.valueword}" readOnly="true"/></g:customCell>
+			</g:row>
+			<g:row>
+			    <g:customCell>
+			        <g:HTMLPanel>
+			        <g:Label text="Bewertung" addStyleNames="{style.keyword}"/>
+			        <g:Label ui:field="reviewInfo" addStyleNames="{style.keyword} {style.reviewinfo}"></g:Label>
+			        </g:HTMLPanel>
+			        </g:customCell>
+				<g:customCell><g:TextArea ui:field="reviewArea" addStyleNames="{style.valueword}" readOnly="false"/></g:customCell>
+			</g:row>
+			<g:row>
+			    <g:customCell><g:Label></g:Label></g:customCell>
+				<g:customCell><g:Label ui:field="statusText" addStyleNames="{style.status}"/></g:customCell>
+			</g:row>
+			
+			<g:row>
+				<g:customCell><g:Button  addStyleNames="button" ui:field="saveButton" text="Bewertung abgeben" width="100%"/></g:customCell>
+				<g:customCell><g:Button  addStyleNames="button" ui:field="closeButton" text="Abbrechen" width="100%"/></g:customCell>
+			</g:row>
+		</g:Grid>
+	</g:HTMLPanel>
+</ui:UiBinder> 

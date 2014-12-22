@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+  <appender name="DefaultAppender" class="org.apache.log4j.ConsoleAppender">    
+    <layout class="org.apache.log4j.PatternLayout">
+       <param name="ConversionPattern" value="%d{yyyy-mm-dd HH:mm:ss} [%t] %5p  %c - %m%n" />
+    </layout>
+  </appender>
+
+  <appender name="AsyncRollingFileAppender" class="org.apache.log4j.AsyncAppender">
+     <param name="BufferSize" value="2" />
+     <appender-ref ref="RollingFileAppender"/>
+  </appender>     
+  
+  <appender name="RollingFileAppender" class="org.apache.log4j.rolling.RollingFileAppender">
+    <param name="File" value="./logs/log-file.log.txt" /> 
+    <param name="append" value="true" />
+    <param name="encoding" value="UTF-8" />
+    <param name="BufferedIO" value="true" />
+    <param name="BufferSize" value="4" />       
+        
+    <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">                                               
+    	<param name="FileNamePattern" value="./logs/log-file.%d.log.gz" />
+    </rollingPolicy>
+    <layout class="org.apache.log4j.PatternLayout">      
+      <param name="ConversionPattern" value="%d{ISO8601} [%t][%x] %5p  %c - %m%n" />
+    </layout>
+  </appender>
+  
+  <logger name="de.tud.kom.socom">
+    <level value="Debug" />    
+  </logger>
+  <logger name="org.apache">
+      <level value="Warn"></level>
+  </logger>
+  
+  <root>
+    <priority value="Debug" />
+    <appender-ref ref="AsyncRollingFileAppender" />
+    <appender-ref ref="DefaultAppender" />
+  </root>   
+</log4j:configuration>

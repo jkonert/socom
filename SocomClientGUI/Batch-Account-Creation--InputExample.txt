@@ -1,0 +1,13 @@
+# SoCom Evaluation Account Generierung
+# f�r Eval Juni 2013
+
+# Format: Vorname; Nachname; Passwort [; groupID][; SoCom ID; facebook-ID; fb-email; access-token]
+# Passwort mind 6 Zeichen --> wird via Facebook vergeben (also leer lassen). NICHT �ndern, sonst ist das AccessToken invalide.
+# groupID (optional) um alle diese Accounts auf Facebook zu befreunden
+# SocomID, facebookID, fb-Email und Token werden dann ggf. automatisch vom Batch gesetzt.
+
+John; Moa; keinPW; GroupA
+John; Mob; keinPW; GroupA
+
+John; Dia; keinPW; GroupB
+Jane; Dib; keinPW; GroupB

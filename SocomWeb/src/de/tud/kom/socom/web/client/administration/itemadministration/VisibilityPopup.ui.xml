@@ -1,0 +1,67 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+    	<ui:style>
+    	.visibilityDialog 
+	    {
+	     	position: absolute;
+			z-index:21;
+			font-size: x-small;
+	    }
+		.left-margin
+		{
+			margin-left: 5px;
+		}
+		.cursor-clickable
+		{
+			cursor: pointer;
+		}
+  	</ui:style>
+    
+	<g:DialogBox ui:field="visibilityDialog" autoHide="true"
+		addStyleNames="{style.visibilityDialog}  hidden">
+	<g:caption><b>Sichtbarkeit</b></g:caption>
+	<g:HorizontalPanel>
+		<g:Grid>
+			<g:row>
+			    <g:customCell>
+			        <g:FlowPanel addStyleNames="{style.cursor-clickable}">
+			            <g:Label ui:field="publicImage" addStyleNames="public-button"></g:Label>
+			            <g:Anchor ui:field="publicLink" addStyleNames="{style.left-margin}">Öffentlich</g:Anchor>
+			        </g:FlowPanel>
+			        </g:customCell>
+			</g:row>
+			<g:row>
+			    <g:customCell>
+			        <g:FlowPanel addStyleNames="{style.cursor-clickable}">
+			            <g:Label ui:field="socomImage" addStyleNames="socom-mini-button"></g:Label>
+			            <g:Anchor ui:field="socomLink" addStyleNames="{style.left-margin}">Socom-intern</g:Anchor>
+			        </g:FlowPanel>
+			        </g:customCell>
+			</g:row>
+			<g:row>
+			    <g:customCell>
+			        <g:FlowPanel addStyleNames="{style.cursor-clickable}">
+			            <g:Label ui:field="friendImage" addStyleNames="friend-button"></g:Label>
+			            <g:Anchor ui:field="friendLink" addStyleNames="{style.left-margin}">Freunde</g:Anchor>
+			        </g:FlowPanel>
+			        </g:customCell>
+			</g:row>
+			<g:row>
+			    <g:customCell>
+			        <g:FlowPanel addStyleNames="{style.cursor-clickable}">
+			            <g:Label ui:field="privateImage" addStyleNames="private-button"></g:Label>
+			            <g:Anchor ui:field="privateLink" addStyleNames="{style.left-margin}">Privat</g:Anchor>
+			        </g:FlowPanel>
+			        </g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+						<g:Button ui:field="buttonClose" addStyleNames="button {style.left-margin}" text="Abbrechen"></g:Button>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+	</g:HorizontalPanel>
+	</g:DialogBox> 
+</ui:UiBinder> 

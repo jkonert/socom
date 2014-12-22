@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements"			 
+			 >
+			 
+	<g:HTMLPanel>		 
+   		<h1 ui:field="headline">Aktuelle Vote&amp;Play Elemente</h1>
+   	</g:HTMLPanel>
+   
+</ui:UiBinder>

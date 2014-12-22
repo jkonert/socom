@@ -1,0 +1,149 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements">
+	<ui:style>
+		.important {
+			font-weight: bold;
+			font-size: small;
+		}
+		.input {
+			width: 180px;
+		}
+		.lookupbutton {
+			margin-left: 10px;
+			margin-top: 3px;
+		}
+		.adminLabel {
+			color: #800000;
+			margin-left: 5px;
+		}
+		.backbutton {
+			position: absolute;
+			right: 200px;
+			top: 0px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<my:ErrorList ui:field="errorList"></my:ErrorList>
+		<g:Tree height="100%" width="100%" ui:field="tree">
+			<g:TreeItem styleName="{style.important}" text="Suche"
+				ui:field="tree_SEARCH">
+				<g:HorizontalPanel>
+					<g:TextBox ui:field="textBox" />
+					<g:Button  addStyleNames="button {style.lookupbutton}" ui:field="lookupButton"
+						text="Lookup" />
+				</g:HorizontalPanel>
+
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="A"
+				ui:field="tree_A">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="B"
+				ui:field="tree_B">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="C"
+				ui:field="tree_C">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="D"
+				ui:field="tree_D">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="E"
+				ui:field="tree_E">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="F"
+				ui:field="tree_F">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="G"
+				ui:field="tree_G">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="H"
+				ui:field="tree_H">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="I"
+				ui:field="tree_I">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="J"
+				ui:field="tree_J">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="K"
+				ui:field="tree_K">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="L"
+				ui:field="tree_L">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="M"
+				ui:field="tree_M">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="N"
+				ui:field="tree_N">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="O"
+				ui:field="tree_O">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="P"
+				ui:field="tree_P">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="Q"
+				ui:field="tree_Q">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="R"
+				ui:field="tree_R">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="S"
+				ui:field="tree_S">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="T"
+				ui:field="tree_T">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="U"
+				ui:field="tree_U">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="V"
+				ui:field="tree_V">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="W"
+				ui:field="tree_W">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="X"
+				ui:field="tree_X">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="Y"
+				ui:field="tree_Y">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="Z"
+				ui:field="tree_Z">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+			<g:TreeItem styleName="{style.important}" text="*"
+				ui:field="tree_OTHER">
+				<g:Label text="Loading..." />
+			</g:TreeItem>
+		</g:Tree>
+		<g:InlineHyperlink addStyleNames="button {style.backbutton}" targetHistoryToken="./admin/overview"> Zurück </g:InlineHyperlink>
+	</g:HTMLPanel>
+</ui:UiBinder> 

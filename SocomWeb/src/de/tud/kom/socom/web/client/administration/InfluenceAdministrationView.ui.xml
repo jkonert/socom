@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements">
+
+	<g:HTMLPanel> 
+		<my:ErrorList ui:field="errorList"></my:ErrorList>
+		Die Administration von Beeinflussungen ist bei <g:InlineHyperlink targetHistoryToken="./influences"> Vote&amp;Play </g:InlineHyperlink> integriert.
+		<g:InlineHyperlink addStyleNames="button" targetHistoryToken="./admin/overview"> Zurück </g:InlineHyperlink>
+	</g:HTMLPanel>
+</ui:UiBinder> 

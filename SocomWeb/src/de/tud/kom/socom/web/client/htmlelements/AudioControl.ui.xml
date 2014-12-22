@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			
+			 >	
+	<ui:style type='de.tud.kom.socom.web.client.htmlelements.AudioControl.AudioStyle'>
+		.audioControl { vertical-align: middle;}
+		.audioProgress {display:inline-block; width: 120px; height: 5px; position: relative; bottom: 4px; background-color: #303590; border: 1px solid #666;}
+		.audioProgressCurrent {width: 0; position: absolute; left: 0; height: 5px; border-right: 1px solid #FFF; background-color:#989bd1;}
+		.audioPlay {display:inline-block; margin-left: 6px; width:0px; 
+  					height:0px; 
+				  border-bottom:9px solid transparent;  /* left arrow slant */
+				  border-top:9px solid transparent; /* right arrow slant */
+				  border-left:14px solid #303590; /* bottom of arrow defines color and visible part */
+				  font-size:0px;
+				  line-height:0px;
+				  cursor: pointer;}
+		.audioStop {display:inline-block; margin: 0 6px; width:9px; 
+				  height:9px; 
+				  border:4px solid #898cc6;  
+				  font-size:0px;
+				  line-height:0px;
+				  background-color:  #303590;
+				  cursor: pointer;}
+		.audioTime {display:inline-block; margin-left: 6px; font-size: 12px; color: #999; position: relative; bottom: 4px;}
+		.audioPlay:hover{border-left-color: #898cc6;}
+		.audioStop:hover{border-color: #303590; background-color: #898cc6; }
+		.audioStopDisabled, .audioStopDisabled:hover {border-color: #999; background-color: #666; cursor: default;}
+		.audioPlayDisabled, .audioPlayDisabled:hover {border-left-color: #999; cursor:default;}
+		
+	</ui:style>	
+   	<g:HTMLPanel addStyleNames="{style.audioControl} audioControl" ui:field="audioControl">
+   		<g:Label addStyleNames="{style.audioPlay}" ui:field="audioPlay"></g:Label>
+   		<g:Label addStyleNames="{style.audioStop} {style.audioStopDisabled}" ui:field="audioStop"></g:Label>
+       	<div class="{style.audioProgress}"><div class="{style.audioProgressCurrent}" ui:field="audioProgressCurrent"></div></div>
+       	<div class="{style.audioTime}" ui:field="audioTime"></div><div class="{style.audioTime} hidden" ui:field="audioLoading">Loading...</div>   
+	</g:HTMLPanel>
+</ui:UiBinder>

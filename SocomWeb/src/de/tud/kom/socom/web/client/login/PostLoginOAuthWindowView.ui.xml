@@ -1,0 +1,34 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements"			 
+			 >
+	<ui:with field='res' type='de.tud.kom.socom.web.client.util.BaseResources'/>
+	<ui:style type="de.tud.kom.socom.web.client.login.PostLoginOAuthWindowView.style">
+		.networkName {font-weight: bold;}
+		.loginWaiting {text-align: center;}
+		.note {font-size: small; color: #999999;}
+		.success, .failure, .loginWaiting  {padding-top: 30px;}
+		.invisible {display: none;}
+		.button {margin: 20px 5px;}
+	</ui:style>		 
+			 
+	<g:HTMLPanel>
+		<h1>Login mittels <span class="{style.networkName}" ui:field="networkName">einer SocialMedia Anwendung</span></h1>
+		<div class="{style.loginWaiting}" ui:field="pleaseWait">Anmeldung wird überprüft. Bitte kurz warten...</div>
+		<my:ErrorList ui:field="errorList"></my:ErrorList>
+		<div class="{style.success} {style.invisible}" ui:field="success">
+			<h2>Anmeldung erfolgreich</h2>
+			Sie können das Fenster schließen.
+			<span class="{style.note}">(es wird automatisch in <span ui:field="seconds">9</span> Sekunden geschlossen)</span>
+		</div>	
+		<div class="{style.failure}  {style.invisible}" ui:field="failure">
+			<h2>Anmeldung fehlgeschlagen!</h2>
+			Bitte schließen Sie das Fenster oder versuchen Sie es erneut.		
+		</div>
+		<g:VerticalPanel horizontalAlignment="ALIGN_CENTER"> 
+			<g:Button ui:field="retryButton" addStyleNames="button {style.button}" >Erneut versuchen</g:Button>
+			<g:Button ui:field="closeButton" addStyleNames="button {style.button}" >Fenster schließen</g:Button>
+		</g:VerticalPanel>
+	</g:HTMLPanel>	
+</ui:UiBinder>

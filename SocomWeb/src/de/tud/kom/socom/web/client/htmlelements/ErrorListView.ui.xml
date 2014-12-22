@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			  xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements"
+			  >
+	<ui:with field='res' type='de.tud.kom.socom.web.client.util.BaseResources'/>
+	
+	<ui:style>
+    	.errorList
+	    {
+		  margin: 0;
+		  margin-bottom: 25px;
+	      padding-left: 0;
+	    }
+  	</ui:style>
+	    <my:UnorderedList ui:field="errorList" addStyleNames="{style.errorList} errorList hidden">
+	    </my:UnorderedList>
+</ui:UiBinder>

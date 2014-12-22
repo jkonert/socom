@@ -1,0 +1,37 @@
+/* Project socom specific additions to base.css */
+
+#headerLogo {
+	background-image: url(../images/socom_logo.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+  height: 186px;
+	width: 374px;
+	position: absolute;
+	left: 576px;
+	z-index: 100;
+}
+
+#header #headerLogo a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+#teaserImage {
+	background-image: url(../images/socom_teaser_group.jpg);
+}
+
+/* 
+#teaserImage.index { background-image: url(../images/socom_teaser_group.jpg); }
+#teaserImage.konsortium { background-image: url(../images/socom_teaser_mobile.png); }
+#teaserImage.projekt { background-image: url(../images/socom_teaser_cloud.png); }
+*/
+
+
+/*  ************************* influence specifics ***********************/
+.influence h1 { 
+    min-height: 156px;
+    background: transparent url(../images/question.png) no-repeat top left;
+    padding-left: 175px;
+    padding-top: 20px;
+}

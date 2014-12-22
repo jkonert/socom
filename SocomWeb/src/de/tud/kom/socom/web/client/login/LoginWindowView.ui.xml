@@ -1,0 +1,71 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements"			 
+			 >
+	<ui:with field='res' type='de.tud.kom.socom.web.client.util.BaseResources'/>
+	
+	<ui:style>
+    	.loginDialog 
+	    {
+	      position: absolute;
+	      right: 0;
+	      bottom: 0;
+	      top: auto!important;
+	      left: auto!important;
+	      z-index: 20;
+	    }
+	    .loginInput  
+	    {
+			width: 180px;
+		}
+		.centertext
+		{			
+			padding: 0 8px;
+		}
+		.passwordForgotten
+		{
+			font-size: 12px;
+		}
+		.closeButton
+		{
+			margin-left: 5px;
+		}
+
+  	</ui:style>
+	
+	<g:DialogBox autoHide="false" glassEnabled="false" addStyleNames="dialogBox {style.loginDialog}">
+	<g:caption><b>Login</b></g:caption>
+	<g:HorizontalPanel>
+		<g:Grid>
+			<g:row>
+				<g:customCell><g:InlineLabel>Benutzername:</g:InlineLabel></g:customCell>
+				<g:customCell><g:TextBox ui:field="userName" addStyleNames="{style.loginInput}"></g:TextBox></g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell><g:InlineLabel>Passwort:</g:InlineLabel></g:customCell>
+				<g:customCell><g:PasswordTextBox ui:field="password" addStyleNames="{style.loginInput}"></g:PasswordTextBox></g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell><g:InlineHyperlink addStyleNames="passwordForgotten {style.passwordForgotten}" ui:field="passwordForgotten" targetHistoryToken="login-pw-lost">Passwort vergessen?</g:InlineHyperlink></g:customCell>
+				<g:customCell>
+					<g:HorizontalPanel>
+						<g:Button ui:field="buttonLogin" addStyleNames="button" text="Login"></g:Button>
+						<g:Button ui:field="buttonClose" addStyleNames="button {style.closeButton}" text="Abbrechen"></g:Button>
+					</g:HorizontalPanel>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		<g:Cell verticalAlignment="ALIGN_MIDDLE">
+			<g:Label addStyleNames="login-or {style.centertext}" text="oder"/>
+		</g:Cell>
+		<g:Cell verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="ALIGN_CENTER">
+			<g:SimplePanel>
+				<g:Button ui:field="buttonFacebook" addStyleNames="button buttonFacebook" text="facebook Login"/>
+			</g:SimplePanel>
+		</g:Cell>
+					
+	</g:HorizontalPanel>
+	</g:DialogBox> 
+	
+</ui:UiBinder>

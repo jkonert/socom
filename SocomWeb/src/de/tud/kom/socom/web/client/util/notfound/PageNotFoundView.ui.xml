@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements">
+	<ui:style>
+	    .lowertext{
+			position: relative;
+			top: 10px;
+			left: 20px;
+		}
+		.moveright{
+			position: relative;
+			left: 100px;
+			top: 75px;
+		}
+	</ui:style>
+    
+	<g:HTMLPanel>
+		<my:ErrorList ui:field="errorList"></my:ErrorList>
+		<div class="{style.moveright}">		    
+			<g:Label ui:field="notfoundlabel" addStyleNames="question_mark"></g:Label>
+			<g:Label addStyleNames="{style.lowertext}">Seite nicht gefunden...</g:Label>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

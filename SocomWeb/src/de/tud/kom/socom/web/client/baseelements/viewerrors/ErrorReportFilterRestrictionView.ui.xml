@@ -1,0 +1,8 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements">	
+	<g:InlineHTML> <!--  a span element -->
+		Es muss mindestens 1 Typ selektiert werden, limit auf mindestens 1 und offset mindestens auf 0 gesetzt werden.
+	</g:InlineHTML>	
+</ui:UiBinder>

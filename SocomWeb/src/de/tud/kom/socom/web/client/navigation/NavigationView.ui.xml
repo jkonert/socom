@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements"			 
+			 >
+	<ui:with field='res' type='de.tud.kom.socom.web.client.util.BaseResources'/>
+			 
+	<my:UnorderedList addStyleNames="flatlist">
+	   		<my:ListItem  ui:field="liGames"><g:InlineHyperlink ui:field="games" targetHistoryToken="./games">Games</g:InlineHyperlink></my:ListItem>
+ 			<my:ListItem  ui:field="liContent"><g:InlineHyperlink ui:field="content" targetHistoryToken="./content">Forum</g:InlineHyperlink></my:ListItem>
+ 			<my:ListItem  ui:field="liInfluences"><g:InlineHyperlink ui:field="influences" targetHistoryToken="./influences">Vote&amp;Play</g:InlineHyperlink></my:ListItem>
+ 			<my:ListItem  ui:field="liAchievements"><g:InlineHyperlink ui:field="achievements" targetHistoryToken="./achievements"></g:InlineHyperlink></my:ListItem>
+ 			<my:ListItem  ui:field="liProfile"><g:InlineHyperlink ui:field="profile" targetHistoryToken="./profiles">Profil</g:InlineHyperlink></my:ListItem>
+ 			<my:ListItem  ui:field="liAdmin"><g:InlineHyperlink ui:field="admin" targetHistoryToken="./admin">Administration</g:InlineHyperlink></my:ListItem>
+ 			
+ 	</my:UnorderedList>		
+</ui:UiBinder>

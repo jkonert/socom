@@ -1,0 +1,133 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements">
+	<ui:style type="de.tud.kom.socom.web.client.administration.ReportAdministrationView.CellCss">
+		.margin-bottom {
+			margin-bottom: 20px;
+		}
+		.margin-left {
+			margin-left: 10px;
+		}
+		.margin-top-big {
+			margin-top:25px;
+		}
+		.margin-top-small {
+			margin-top:15px;
+		}
+		.bordered {
+			border-style: solid;
+			border-color: #4F54A6;
+			border-width: thin;
+		}
+		.border-title {
+			position: relative;
+			display: inline-block;
+			top: -16px;
+			left: 10px;
+			background:#fff;
+		}
+		.border-content {
+			position: relative;
+			top: -10px;
+		}
+		.separator {
+			border-left: thin solid #4f54a6
+			padding-left: 5px;
+		}
+		.input-right {
+			text-align: right;
+		}
+		.align-right {
+			position:absolute;
+			right: 50px;
+		}
+		.folded {
+			height: 10px;
+		}
+		.unfold-button {
+			position: absolute;
+			height: 16px;
+			font-size: 13px;
+			top: 55px;
+			right: 50px;
+		}
+		.reporttable {
+			width: 100%;
+		}
+		.reporttablecelltop{
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			background-color: #e8e8e8;
+		}
+		.reporttablecelleven {
+			font-size: 12px;
+			text-align: center;
+		}
+		.reporttablecellodd {
+			background-color: #f2f2f2;
+			font-size: 12px;
+			text-align: center;
+		}
+		.boldonhover:hover {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:InlineHyperlink addStyleNames="button {style.margin-bottom}"
+			targetHistoryToken="./admin/overview"> Zurück </g:InlineHyperlink>
+		
+	<g:HTMLPanel ui:field="filterPanel">
+		<my:ErrorList ui:field="errorList"></my:ErrorList>
+		<g:FlowPanel addStyleNames="{style.bordered} {style.margin-top-big}">
+			<g:Label addStyleNames="{style.border-title}">Filter</g:Label>
+			<g:HTMLPanel addStyleNames="{style.border-content}">
+				<g:CheckBox checked="true" ui:field="userChk"
+					addStyleNames="{style.margin-left}">User</g:CheckBox>
+				<g:CheckBox checked="true" ui:field="contentChk"
+					addStyleNames="{style.margin-left}">Content</g:CheckBox>
+				<g:CheckBox checked="true" ui:field="commentChk"
+					addStyleNames="{style.margin-left}">Kommentare</g:CheckBox>
+				<g:CheckBox checked="true" ui:field="inflansChk"
+					addStyleNames="{style.margin-left}">Influence Antworten</g:CheckBox>
+				<g:CheckBox checked="false" ui:field="showReviewedChk"
+					addStyleNames="{style.margin-left} {style.separator}">Bereits geprüft</g:CheckBox>
+				<g:CheckBox checked="false" ui:field="useUserChk"
+					addStyleNames="{style.margin-left} {style.separator}">Informant</g:CheckBox>
+				<g:TextBox ui:field="informantBox" width="100px"
+					addStyleNames="{style.margin-left}"></g:TextBox>
+			</g:HTMLPanel>
+		</g:FlowPanel>
+		<g:FlowPanel addStyleNames="{style.bordered} {style.margin-top-small}">
+			<g:Label addStyleNames="{style.border-title}">Notation</g:Label>
+			<g:HTMLPanel addStyleNames="{style.border-content}">
+				<g:InlineLabel addStyleNames="{style.margin-left}">Limit: </g:InlineLabel>
+				<g:IntegerBox text="15" width="40px" ui:field="limitBox"
+					addStyleNames="{style.input-right} {style.margin-left}"></g:IntegerBox>
+				<g:InlineLabel addStyleNames="{style.margin-left}">Offset: </g:InlineLabel>
+				<g:IntegerBox text="0" width="40px" ui:field="offsetBox"
+					addStyleNames="{style.input-right} {style.margin-left}"></g:IntegerBox>
+				<g:InlineLabel addStyleNames="{style.separator} {style.margin-left}">Sortiere nach: </g:InlineLabel>
+				<g:ListBox ui:field="orderbyList" addStyleNames=" {style.margin-left}">
+				    <g:item>Datum</g:item>
+				    <g:item>Typ</g:item>
+				    <g:item>Informant</g:item>
+				</g:ListBox>
+				<g:ListBox ui:field="orderbyAscDescList" addStyleNames=" {style.margin-left}">
+				    <g:item>Aufsteigend</g:item>
+				    <g:item>Absteigend</g:item>
+				</g:ListBox>
+				<g:Button ui:field="fetchButton" addStyleNames="button {style.align-right}">Aktualisieren</g:Button>
+			</g:HTMLPanel>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+	
+	<g:HTMLPanel ui:field="foldedFilterPanel" addStyleNames="hidden {style.bordered} {style.folded} {style.margin-top-big}">
+	    <g:Label addStyleNames="{style.border-title}">Filter, Notation</g:Label>
+	    <g:Button ui:field="unfoldButton" addStyleNames="button {style.align-right} {style.unfold-button}">Ausklappen</g:Button>
+	</g:HTMLPanel>
+	
+	<g:FlexTable ui:field="reportTable" addStyleNames="hidden {style.bordered} {style.margin-top-big} {style.reporttable}"/>
+	
+	</g:HTMLPanel>
+</ui:UiBinder> 

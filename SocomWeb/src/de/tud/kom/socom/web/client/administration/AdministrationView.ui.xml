@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements">
+	<g:HTMLPanel>
+		<my:ErrorList ui:field="errorList"></my:ErrorList>
+		<g:InlineHyperlink ui:field="userLink" addStyleNames="button" targetHistoryToken="./admin/user"> User </g:InlineHyperlink>
+		<g:InlineHyperlink ui:field="influencesLink" addStyleNames="button" targetHistoryToken="./admin/influence"> Influences </g:InlineHyperlink>
+		<g:InlineHyperlink ui:field="contentLink" addStyleNames="button" targetHistoryToken="./admin/content"> Content </g:InlineHyperlink>
+		<g:InlineHyperlink ui:field="statisticsLink" addStyleNames="button" targetHistoryToken="./admin/statistic"> Game Statistics </g:InlineHyperlink>
+		<g:InlineHyperlink ui:field="reportLink" addStyleNames="button" targetHistoryToken="./admin/report"> Reports </g:InlineHyperlink>
+	</g:HTMLPanel>
+</ui:UiBinder> 

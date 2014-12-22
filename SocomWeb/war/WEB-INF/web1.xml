@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+	
+	 	<servlet>
+		<servlet-name>socomWebTemplate</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SoComWebTemplateServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>socomWebTemplate</servlet-name>
+		<url-pattern>
+            socomWeb.html
+        </url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>socomCore</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SoComWebCoreImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>socomCore</servlet-name>
+		<url-pattern>
+            /socomweb/core
+        </url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>InfluenceService</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SoComInfluenceServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InfluenceService</servlet-name>
+		<url-pattern>
+            /socomweb/influence
+        </url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ContentService</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SoComContentServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ContentService</servlet-name>
+		<url-pattern>
+            /socomweb/content
+        </url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GameService</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SoComGameServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GameService</servlet-name>
+		<url-pattern>
+            /socomweb/game
+        </url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AchievementService</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SoComAchievementServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AchievementService</servlet-name>
+		<url-pattern>
+            /socomweb/achievements
+        </url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SocialNetworkService</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SocialNetworkServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SocialNetworkService</servlet-name>
+		<url-pattern>
+            /socomweb/fb
+        </url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminService</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SoComAdministrationServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AdminService</servlet-name>
+		<url-pattern>
+            /socomweb/admin
+        </url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LoginService</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SoComLoginServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginService</servlet-name>
+		<url-pattern>
+            /socomweb/login
+        </url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StatisticService</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SoComStatisticServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StatisticService</servlet-name>
+		<url-pattern>
+            /socomweb/stats
+        </url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>ReportService</servlet-name>
+		<servlet-class>de.tud.kom.socom.web.server.SoComReportingServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ReportService</servlet-name>
+		<url-pattern>
+            /socomweb/report
+        </url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+
+ 	<welcome-file-list>
+		<welcome-file>SoComWeb.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements"			 
+			 >
+	<ui:with field='res' type='de.tud.kom.socom.web.client.util.BaseResources'/>
+	
+	<g:FlowPanel>
+	<!-- all elements are not visible first, as LoginPresenter has to decide what to display -->
+		<g:InlineLabel ui:field="userNamePrefix" visible="false">Hallo </g:InlineLabel>
+		<g:InlineLabel addStyleNames="userName" ui:field="userName" visible="false"></g:InlineLabel>
+		<g:Button addStyleNames="button" ui:field="buttonLogout" visible="false">Logout</g:Button>
+		<g:Button addStyleNames="button" ui:field="buttonLogin" visible="false">Login</g:Button>
+			
+	</g:FlowPanel>
+	
+</ui:UiBinder>

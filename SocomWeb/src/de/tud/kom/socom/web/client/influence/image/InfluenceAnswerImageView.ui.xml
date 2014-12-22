@@ -1,0 +1,125 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements"	
+			 xmlns:admin="urn:import:de.tud.kom.socom.web.client.administration.itemadministration"
+			 xmlns:report="urn:import:de.tud.kom.socom.web.client.reporting"
+			 >	
+	<ui:style>
+			.answerFormTargetFrame { width: 0px; height: 0px; }
+			.imagebox {
+				border: thick solid #787CBF;
+				border-radius: 2px;
+				width: 250px;
+				height: 187px;
+				outline: medium none;
+				cursor: pointer;
+				margin-right: 17px;
+				margin-bottom: -30px;
+			}
+			.textlabel {
+				color: #fff;
+				position: relative;
+				top: 0px;
+				left: 2px;
+				white-space: nowrap;
+			}
+			.textbox {
+				position: relative;
+				top: 7px;
+				left: 4px;
+				border: solid;
+				width: 251px;
+				background-color: #787CBF;
+				opacity: 0.83;
+				display: inline-block;
+				border: none;
+			}
+			.magnf{
+  				height: 30px;
+  				width: 30px;
+				position: relative;
+				top: -181px;
+				left: 5px;
+				opacity: 0.7;
+				cursor: pointer;
+  				background-repeat: no-repeat;
+				background-image:url(data:image/png;base64,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);
+				z-index:2;
+			}
+			.magnf:hover {opacity: 1;}
+			.full {
+				position:fixed;
+    			top:0px;
+    			left:0px;
+    			width:100%;
+    			height:100%;
+    			overflow:auto;
+				z-index: 99999998;
+				visibility: hidden;
+			}
+			.black {background-color: #000;	}
+			.fullimg {z-index: 100000000;	}
+			.fromuser {clear:left; font-size: 10px; color: #999; line-height: 0.7em; position:absolute; left:4px; top:26px;}
+			.imgcontainer { margin-top:2%;}
+			.reportpos { position: relative; top: -39px; left: 240px; }
+			.admincontainer {position:absolute; z-index:2;}
+			.itemadminposition { position: absolute; top: 5px; left: 35px;}
+			.blackoverlay { background-color: #111; opacity: 0.75; position:absolute; height:187px; width:250px; z-index: 1; border: thick solid #111; border-radius: 2px;}
+			.addfreeimagebox { border: medium dashed #bbb;
+				border-radius: 2px;
+				width: 253px;
+				height: 188px;
+				outline: medium none;
+				cursor: pointer;
+				margin-right: 17px;
+				margin-bottom: -2px;
+  				background-repeat: no-repeat;
+				background-color: #e4e4e4;
+				background-position: center;
+				background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAR0SURBVHjaYty0aRMDGuABYgMgtgBiXSBWBmJ5IBYBYg4G+oKfQPwKiB8B8T0gvgbEJ4D4AhB/QFYIEEAsaBpFgVgHiO2gHlEAYkkg5mcYGMAOxLJAzAcNSAloQLNDPfMSphAggJA9IgTElkAcBMQ2QKwEFWckwsL/RKojF/BDPaMOxGrQVLIWiA9BY4wBIIBYkBSCHB8KxI7QWCDFYdT0xH8c5sLY8tAYYYK6fzcQvwUIIBZoVBkCcTAQe0CjcKABoRgGJTE3IGYG4ndAfAwggFigGdsBiG2BWJCOyYVQ7BKymxeIzaAFwDeAAGKB5gtQxlbEEb0MA+gZfIAZWhCAPPMFIIBYoKWUPFoMkB0TrKysDLKysgzc3NwM//9jhsfnz58ZHj58SM0kCHK7NkAAsUBjQppayYiHh4dBU1OTgYmJCav8nz9/qOkRkJulQNUEQAAxQaOHl5rp4u/fvzjl/v37R+1kCCqWZQECCOQRMaoXOf/pnsXEAQII5BEuhqEPuAACiAlL5vk/FH0CEEDoHgEl4L9D0TMAAYQtRv4NxRgBCCAWAh4bMgAggJiwlMtD0jMAAcSEo5JhHGoeAQggFho2x+kKAAKI6sloACpDMAAIIBaCPmUiza/MzMwMjIyMVDWTmKYNQADh9YiqqioDLy8v0aEMsoyDgwPsGZwWsrAw6Ovrk9YyBAbMmzdvGB49eoRTDUAAEfQIPkeRlZaBsSEjI0OyPhEREbweAQggvHEManIPFkAoaQEE0JCpMwglb4AAGrI1OToACKBh4xGAABoyHiFUpAME0JDxCFrBg9FvAgggvMXvuXPnSK5HQIMPCgoKOIttkIOuX79OVj2C5hGUKAIIILweAWlGM4AgEBAQAA8H4fIIyLMPHjygeowBBBATvdMyrQBAAA3VUgsjtAACiGW4eAQggAjFyJAZVQEIIHwegY2o/BsKngEIICYC0cc4VGIGIIAIeYQZSv8f7J4BCCAmIjMWIzSJDdpkBhBAII98J9IjDIM4Zv4CBBDIIy+JjBUmpJihp0eQAw5XQP4ACCCQ4x4D8WcSkiHBGKFS7f4fj8OR+aDW5AuAAAI5DtTweUZCKP8n1HDE18gkYaLnP5bYxzZ4+BaI7wAEEKhmv8oAme5VJzGJYQWgOcKTJ08ycHJyYvXQly9fSA0oJgI1OygizgMEEMgjoLUd3KBBEwbINBwzEUXyfwYc09egEP/w4QMYU5iscMUAA1JeBTXNjwDxfoAAAnkEtKaDDYhVGCBzicJEtHFg0Y43dkhwNCMZakGl7TkGyDKOUwABBPLIR6gAHzS0QUs4RElttFG5lMJlD4wPiu6jDJD1KKdAfIAAYkHKMIegrWFQKIMm4eXwhBYjWo1PiccY8XgCm7mgRTTngXgdEO+EVR8AAYTcjH8N9cx7aAEA8ow8tCAQolPM4HL8LyB+zgBZswWKgWNQzzyHeR4ggND7I8+hdQqoaPnEAFkVoQiNHXFooUBP8Aua9EHVw11ofj4M9cRHZIUAAQYARvINhLKXRHkAAAAASUVORK5CYII=);
+				-o-transition:.99s;
+  				-ms-transition:.99s;
+  				-moz-transition:.99s;
+  				-webkit-transition:.99s;
+ 	 			transition:.99s;
+				}
+			.addfreeimagebox.drop {
+				background-color: #bbb;
+				background-size: 70px auto;
+			}
+			.addfreeimagebox:hover { background-color: #CEEBD4; }
+				</ui:style>
+	<!--  relative verboten weil dann alles verschoben wird!! -->
+	<g:HTMLPanel >
+	    	<div class="hidden resultbar resultbaronimage" ui:field="resultBar"> <!--  may contain class "winner" as well for green color -->
+	    	  <div class="numbers"><span class="number" ui:field="number">x</span> von <span class="total" ui:field="total">y</span></div>
+	          <div class="bar" ui:field="bar"><div class="percent" ui:field="percent">z%</div></div>
+          	</div>
+	    	<div class="{style.blackoverlay} hidden" ui:field="engreyimg"></div>
+	    	<div class="{style.admincontainer}">
+	    		<admin:ItemAdministration addStyleNames="{style.itemadminposition}" ui:field="itemAdministration" />	    	    
+	    	</div>
+	    	<div class="{style.full} {style.black}" ui:field="fullscreen"/>
+	    	<div class="{style.full} {style.imgcontainer}" ui:field="fullscreenimgcontainer">
+				<g:FocusPanel addStyleNames=" {style.fullimg}" ui:field="fullscreenimg"></g:FocusPanel>
+	    	</div>
+	    	
+	    	<g:FocusPanel addStyleNames="{style.imagebox}" ui:field="img"></g:FocusPanel>
+	    	<g:FocusPanel addStyleNames="{style.addfreeimagebox} hidden" ui:field="freeimg"></g:FocusPanel>
+	    	
+	    	<span class="{style.textbox}" ui:field="textbox">
+	    		<g:Label addStyleNames="{style.textlabel}" ui:field="answerLabel"></g:Label>
+	    	<div class="{style.fromuser} hidden" ui:field="fromUserContainer">Von <g:InlineHyperlink ui:field="fromLink"></g:InlineHyperlink> vor <span ui:field="fromTime">1 Minute</span> hinzugefügt.</div>
+	    	</span>
+	    	
+	    	<g:Label addStyleNames="{style.magnf}" ui:field="magnifier"/>
+	    	
+			<g:FormPanel ui:field="answerForm" method="post" encoding="multipart/form-data" addStyleNames="hidden">
+		       		<g:HTMLPanel ui:field="answerFormHiddenContainer"><!--  because FormPanel aka SimplePanel can only contain one.. -->
+		       			<g:FileUpload ui:field="answerFileUpload" addStyleNames="answerFileBox"></g:FileUpload>
+		       		</g:HTMLPanel>
+		    </g:FormPanel>
+	    	<report:ItemReportView addStyleNames="{style.reportpos}" ui:field="itemReportView"/>
+	</g:HTMLPanel>
+</ui:UiBinder>

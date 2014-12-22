@@ -1,0 +1,78 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+ xmlns:g="urn:import:com.google.gwt.user.client.ui">
+ 
+<!--  	<ui:with field='res' type='de.tud.kom.socom.web.client.influence.InfluenceListItemCellView.InfluenceRessources'/> -->
+ 	<ui:image field="iconText" src="icon-txt20t.png" />
+ 	<ui:image field="iconAudio" src="icon-aud20t.png" />
+ 	<ui:image field="iconImage" src="icon-img20t.png" />
+ 
+	<ui:style type='de.tud.kom.socom.web.client.influence.InfluenceListItemCellView.InfluenceRessources.Styles'>		
+		.outerFrame { margin: 3px 0px; padding: 3px; min-height: 40px; border: 1px #a6a3ea solid;}
+		.outerFrame:hover {background-color: #E8E7FB; border-color: #a6a3ea;}
+		.imageTeaser {width: 20px; height: 20px; float:left;}
+		.influenceWrapper {float:left;}
+@sprite .txt {gwt-image: "iconText"; }
+@sprite .aud {gwt-image: "iconAudio"; }
+@sprite .img {gwt-image: "iconImage"; }
+		.question  {font-size: 14px; font-style: italic;}
+		.context {font-size: 12px;}
+		.cKey {padding-left: 6px; color: #9c9ad4; font-weight: bold;}
+		.cKey.first {padding-left: 0;}
+		.cValue {font-weight: normal; }
+		.odd {								
+
+
+background: #f7f7ff;
+					background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1NSUiIHN0b3AtY29sb3I9IiNmN2Y3ZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZGZkZWY0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+					background: -moz-linear-gradient(top,  #f7f7ff 55%, #dfdef4 100%);
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(55%,#f7f7ff), color-stop(100%,#dfdef4));
+					background: -webkit-linear-gradient(top,  #f7f7ff 55%,#dfdef4 100%);
+					background: -o-linear-gradient(top,  #f7f7ff 55%,#dfdef4 100%);
+					background: -ms-linear-gradient(top,  #f7f7ff 55%,#dfdef4 100%);
+					background: linear-gradient(to bottom,  #f7f7ff 55%,#dfdef4 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7ff', endColorstr='#dfdef4',GradientType=0 );
+
+			
+				}
+		.even {	background: #eaeaff;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1NSUiIHN0b3AtY29sb3I9IiNlYWVhZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYzRjM2Y0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(top,  #eaeaff 55%, #c4c3f4 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(55%,#eaeaff), color-stop(100%,#c4c3f4));
+background: -webkit-linear-gradient(top,  #eaeaff 55%,#c4c3f4 100%);
+background: -o-linear-gradient(top,  #eaeaff 55%,#c4c3f4 100%);
+background: -ms-linear-gradient(top,  #eaeaff 55%,#c4c3f4 100%);
+background: linear-gradient(to bottom,  #eaeaff 55%,#c4c3f4 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaff', endColorstr='#c4c3f4',GradientType=0 );
+
+
+				}
+	  .odd:hover, .even:hover {	
+	background: #eaeaea;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(top,  #eaeaea 0%, #f9f9f9 51%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(51%,#f9f9f9));
+background: -webkit-linear-gradient(top,  #eaeaea 0%,#f9f9f9 51%);
+background: -o-linear-gradient(top,  #eaeaea 0%,#f9f9f9 51%);
+background: -ms-linear-gradient(top,  #eaeaea 0%,#f9f9f9 51%);
+background: linear-gradient(to bottom,  #eaeaea 0%,#f9f9f9 51%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#f9f9f9',GradientType=0 );
+
+
+				}	
+	</ui:style>
+	<!--  the style lines 23/33 -webkit-linear-gradients produce UiBinder warnings...ignore. -->
+	<div class="{style.outerFrame}" ui:field="outerFrame">
+		<div class="{style.imageTeaser}" ui:field="imageTeaser"></div> <!--  will contain an extra class txt img aud  etc. for background image...set dynamically by viewcode -->
+		<div class="{style.influenceWrapper}">
+			<div class="{style.question}" ui:field="question"></div>
+			<div class="{style.context}" ui:field="context">
+				<span class="{style.cKey} {style.first}">Spiel: <span class="{style.cValue}" ui:field="gameName"></span></span>
+				<span class="{style.cKey}">Spieler: <span class="{style.cValue}" ui:field="playerName"></span></span>
+				<span class="{style.cKey}"><span ui:field="currentAnswersPrefix">bisherige </span>Antworten: <span class="{style.cValue}" ui:field="numAnswers"></span></span>
+				<span class="{style.cKey}">Restzeit: <span class="{style.cValue}" ui:field="timeLeft"></span></span>
+			</div>
+		</div>		
+	</div>
+	
+</ui:UiBinder>

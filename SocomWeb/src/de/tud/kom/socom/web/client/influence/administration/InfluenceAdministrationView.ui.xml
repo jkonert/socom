@@ -1,0 +1,71 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style>
+    	.timeDialog 
+	    {
+	      position: absolute;
+	      top: -5px!important;
+	      left: -5px!important;
+	      z-index: 20;
+	    }
+	    .timeInput  
+	    {
+			width: 60px;
+		}
+		.closeButton
+		{
+			margin-left: 5px;
+		}
+		.startButton
+		{
+			margin-left: 10px;
+		}
+		.adminpanel
+		{
+			position: relative;
+			font-size: small;
+			border-style: solid;
+			border-width: 0px;
+			border-top-width: 1px;
+			border-bottom-width: 1px;
+			border-color: navy;
+			padding: 4px;
+			margin-left: 50px;
+			margin-right: 755px;
+			
+		}
+		
+  	</ui:style>
+
+	<g:HTMLPanel addStyleNames="{style.adminpanel}">
+	<g:Label >Administration</g:Label>
+	<g:HorizontalPanel>
+		<g:Button addStyleNames="button" ui:field="stopButton">Stop</g:Button>
+		<g:Button  addStyleNames="button  {style.startButton}" ui:field="startButton">Start</g:Button>
+		</g:HorizontalPanel>
+		
+		
+		
+		<g:DialogBox ui:field="startDialog" autoHide="false" glassEnabled="false" addStyleNames="dialogBox {style.timeDialog} hidden">
+	<g:caption><b>Beeinflussung starten</b></g:caption>
+	<g:HorizontalPanel>
+		<g:Grid>
+			<g:row>
+				<g:customCell><g:InlineLabel>Zeit in s:</g:InlineLabel></g:customCell>
+				<g:customCell><g:LongBox addStyleNames="timeInput" ui:field="timeBox"></g:LongBox></g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+						<g:Button ui:field="buttonStartNow" addStyleNames="button" text="Start"></g:Button>
+				</g:customCell><g:customCell>
+						<g:Button ui:field="buttonClose" addStyleNames="button {style.closeButton}" text="Abbrechen"></g:Button>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+	</g:HorizontalPanel>
+	</g:DialogBox> 
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 

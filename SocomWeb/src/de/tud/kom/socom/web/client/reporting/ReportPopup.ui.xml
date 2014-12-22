@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+    <ui:style>
+    	.reportDialog 
+	    {
+	     	position: absolute;
+			z-index:21;
+			font-size: x-small;
+	    }
+		.left-margin-small
+		{
+			margin-left: 5px;
+		}
+		.left-margin-tiny
+		{
+			margin-left: 3px;
+		}
+		.cursor-clickable
+		{
+			cursor: pointer;
+		}
+  	</ui:style>
+    
+	<g:DialogBox ui:field="visibilityDialog" autoHide="true" addStyleNames="{style.reportDialog}  hidden">
+	<g:caption><b>Melden</b></g:caption>
+		<g:HorizontalPanel>
+		<g:Grid>
+		    <g:row>
+		        <g:customCell>
+		            <g:HorizontalPanel ui:field="textLengthPanel">
+			            <g:Label>Warum? (noch </g:Label>
+			            <g:Label ui:field="textLength" addStyleNames="{style.left-margin-tiny}"> 200 </g:Label>
+		            	<g:Label addStyleNames="{style.left-margin-tiny}"> Zeichen)</g:Label>		                
+		            </g:HorizontalPanel>
+		        </g:customCell>
+		    </g:row>
+		    <g:row>
+		        <g:customCell>
+		            <g:TextArea ui:field="reportTextArea"></g:TextArea>
+		        </g:customCell>
+		    </g:row>
+			<g:row>
+				<g:customCell>
+				    <g:HorizontalPanel>
+						<g:Button ui:field="buttonSend" addStyleNames="button" text="Einreichen"></g:Button>				        
+						<g:Button ui:field="buttonClose" addStyleNames="button {style.left-margin-small}" text="Abbrechen"></g:Button>
+				    </g:HorizontalPanel>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+	</g:HorizontalPanel>
+	</g:DialogBox> 
+</ui:UiBinder> 

@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			  xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements"
+			  xmlns:infadmin="urn:import:de.tud.kom.socom.web.client.influence.administration"
+			  >
+	<ui:with field='res' type='de.tud.kom.socom.web.client.util.BaseResources'/>
+	
+	<ui:style>
+    	.errorList 
+	    {
+	      margin: 0;
+	      padding-left: 0;
+	    }
+		.adminpanel{
+		margin-top: 50px;
+		}
+		.answerwidth { width: 100% }
+  	</ui:style>
+	<g:HTMLPanel>
+		<div class="influence">		
+	    <h1 ui:field="question">[Question]</h1>
+	    <div class="timer hidden" ui:field="timer" title="verbleibende Zeit">
+	      <div class="c1"></div><div class="c2"></div>
+	      <div class="c3"></div><div class="c4"></div>    
+	      <div class="time"><p ui:field="time">Xmin Ysec</p></div>
+	    </div>
+	    <my:ErrorList ui:field="errorList"></my:ErrorList>		
+		  <g:HTMLPanel>
+		  	  <g:FlexTable ui:field="formElements" addStyleNames="{style.answerwidth}">
+		  	  </g:FlexTable>
+			  <g:HTMLPanel addStyleNames="submit" ui:field="submitWrapper">
+	        		<g:Button ui:field="buttonSubmit" addStyleNames="submit button">Absenden</g:Button>
+	      	   </g:HTMLPanel>
+	      	   
+			  <infadmin:InfluenceAdministrationView addStyleNames="{style.adminpanel} hidden" ui:field="adminView"></infadmin:InfluenceAdministrationView>
+		 </g:HTMLPanel>	      
+	    <div class="legalnote">Die Bereitstellung dieses Services zur Beeinflussung und Bereitstellung von Inhalten für Instanzen von Computerspiele von Freunden und Bekannten erfolgt ohne jegliche Garantie. Insbesondere wird die dauernde Verfügbarkeit nicht garantiert. Die Berücksichtigung der bereitgestellten Inhalte und Antworten hängt vom Spielverlauf und Netzwerbindung ab.
+	    Sie verwenden den Service auf eigene Gefahr. Sie stellen nur eigene Inhalte (Texte, Bild, Ton, Video, etc.) die frei von Rechtsansprüchen Dritter sind oder für die Sie selbst die Rechte besitzen. Der Betreiber dieses Services agiert nur als Mittelsmann zur Übermittlung der Daten zwischen Ihnen und dem Compuerspiel. Ansprüche Dritter aufgrund von Uhrheberrechtsverletzungen werden daher direkt an den Verursacher gerichtet.
+	    Weitere Details: <a href="#">siehe Datenschutzrichtlinien und AGB</a>.
+	    </div>  
+			<div class="clear"></div>
+		</div>	
+	</g:HTMLPanel>
+	
+</ui:UiBinder>

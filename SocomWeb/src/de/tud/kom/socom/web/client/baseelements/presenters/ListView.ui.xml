@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:gc="urn:import:com.google.gwt.user.cellview.client"
+			  xmlns:my="urn:import:de.tud.kom.socom.web.client.htmlelements"
+			  xmlns:infadmin="urn:import:de.tud.kom.socom.web.client.influence.administration"
+			  >
+	<ui:with field='res' type='de.tud.kom.socom.web.client.util.BaseResources'/>
+	
+	<ui:style>
+    	.errorList 
+	    {
+	      margin: 0;
+	      padding-left: 0;
+	    }
+		.pager { float:right;}
+		.list {clear:right;}
+
+  	</ui:style>
+	<g:HTMLPanel addStyleNames="list">	    
+	    <my:ErrorList ui:field="errorList" addStyleNames="{style.errorList}"></my:ErrorList>				
+		<gc:SimplePager ui:field="pagerTop" addStyleNames="{style.pager}"></gc:SimplePager><!--  as it needs Parameters for Constructor it is "provided" by Javacode (see .java) -->		
+	    <gc:CellList ui:field="cellList" addStyleNames="{style.list}"></gc:CellList><!--  as it needs Parameters for Constructor it is "provided" by Javacode (see .java) -->				
+		<gc:SimplePager ui:field="pagerBottom" addStyleNames="{style.pager}"></gc:SimplePager><!--  as it needs Parameters for Constructor it is "provided" by Javacode (see .java) -->					
+	</g:HTMLPanel>
+	
+</ui:UiBinder>

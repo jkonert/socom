@@ -11,16 +11,16 @@ SoCom is a GWT-based middleware that allows easy connection of any arbitrary app
 ## How to
 
 There is a lightweight 
-(short HOWTO) [https://github.com/jkonert/socom/blob/master/Doku/Socom%20nutzen/starten.pdf]
+[short HOWTO](https://github.com/jkonert/socom/blob/master/Doku/Socom%20nutzen/starten.pdf)
 for first steps (currently only in German).
 
 ## API
 There is a 
-(API documentation) [https://github.com/jkonert/socom/blob/master/Doku/API%20Table/Englisch%2C%20neu/apitable.pdf]
+[API documentation](https://github.com/jkonert/socom/blob/master/Doku/API%20Table/Englisch%2C%20neu/apitable.pdf)
 to ease the design of HTTP-based API-calls.
 
 And there is a generated
-(JavaDoc) [https://github.com/jkonert/socom/blob/master/SocomAPI/doc_api/index.html]
+[JavaDoc](https://github.com/jkonert/socom/blob/master/SocomAPI/doc_api/index.html)
 available.
 
 

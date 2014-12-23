@@ -24,7 +24,7 @@ And there is a generated
 available.
 
 
-=== Outlook
+## Outlook
 
 More on SoCom will follow soon.
 We just wanted to release it on time for Christmas. Enjoy!
